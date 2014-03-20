@@ -3,7 +3,7 @@ class Robot
     @sound = sound
   end
 
-  def beep
+  def make_sound
     @sound
   end
 end
