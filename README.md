@@ -8,3 +8,5 @@ Add some new text here to illustrate a change.
 
 This is a bug fix for the readme.
 
+Create a merge conflict.
+
