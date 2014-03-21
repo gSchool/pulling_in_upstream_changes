@@ -6,7 +6,9 @@
 
 
   <% ItemsRepository.new.items.each do |item|%>
-      <li><%=item.name%> <a href="/items/<%= item.id %>">Show item</a>
+      <% if item.name.downcase.include?(@searched.to_s.downcase)%>
+         <li><%=item.name%> <a href="/items/<%= item.id %>">Show item</a>
+      <% end %>
   <% end %>
 
 
