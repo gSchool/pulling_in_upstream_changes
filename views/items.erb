@@ -1,0 +1,20 @@
+<html>
+<body>
+<h1>Dinky-Linky</h1>
+<a href="/items/new">create a new item</a>
+<ul>
+
+
+  <% ItemsRepository.new.items.each do |item|%>
+      <% if item.name.downcase.include?(@searched.to_s.downcase)%>
+         <li><%=item.name%> <a href="/items/<%= item.id %>">Show item</a>
+      <% end %>
+  <% end %>
+
+
+  <!--<li>2 dinky linky...<a href="/items/1">Show item</a>-->
+  <!--<li>3 dinky linky...<a href="/items/1">Show item</a>-->
+</ul>
+<p>Muahahaha!</p>
+</body>
+</html>
